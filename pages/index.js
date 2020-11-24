@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Header from "../components/headers";
 
 const List = ({ items, ...props }) => {
   const [filteredItems, setFilteredItems] = useState(items);
@@ -27,10 +28,15 @@ const List = ({ items, ...props }) => {
 
 function ListContainer() {
   return (
-    <List
-      aria-label="My Fanct List"
-      items={["Learn React.js", "Learn Next.js", "싸무 조아!", "중만 조아!"]}
-    />
+    <>
+      <Header />
+      <hr />
+      <List
+        aria-label="My Fanct List"
+        items={["Learn React.js", "Learn Next.js", "조아!", "중만 조아!"]}
+      />
+      <hr />
+    </>
   );
 }
 export default ListContainer;
